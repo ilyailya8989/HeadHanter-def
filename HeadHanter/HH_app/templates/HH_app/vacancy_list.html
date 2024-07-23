@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0">
+    <title>Vacancy List</title>
+</head>
+<body>
+    <h1>Vacancy List</h1>
+    <ul>
+        {% for vacancy in vacancies %}
+        <li>{{ vacancy.title }} - <a href="{% url 'vacancy_detail' pk=vacancy.id %}">View Details</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
